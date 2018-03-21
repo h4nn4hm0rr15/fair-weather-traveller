@@ -6,10 +6,6 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/google-map-page/')
-def map():
-        return render_template('google-map-page.html')
-
 the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
 #""".format(time=the_time)
