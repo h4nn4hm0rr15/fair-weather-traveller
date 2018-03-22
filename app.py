@@ -6,9 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
+# the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
-#""".format(time=the_time)
+# """.format(time=the_time)
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
+    app.run(debug=True)
