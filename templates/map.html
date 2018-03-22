@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="../static/map.css" media="screen" />
   </head>
   <body>
     <h3>Fair Weather Traveller</h3>
@@ -9,8 +10,8 @@
       function initMap() {
         var location = {lat: 51.5285578, lng: -0.242023};
         var map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 4,
-            center: location
+            center: location,
+            zoom: 4
         });
         var marker = new google.maps.Marker({
           position: location,
@@ -18,7 +19,7 @@
         });
       }
     </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZ7WHje9ZXaHLUPrJJBinTC5TDprQ4c4&callback=initMap"> </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZ7WHje9ZXaHLUPrJJBinTC5TDprQ4c4&callback=initMap" async defer> </script>
 
    <div class="about">
      <h1>World Map</h1>
