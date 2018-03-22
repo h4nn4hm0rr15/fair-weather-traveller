@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-    #map {
-      height: 100%;
-    }
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    </style>
+      <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='map.css') }}">
   </head>
   <body>
     <h3>Fair Weather Traveller</h3>
+    <form class="input" method="POST" action="/get_weather">
+      City : <input type="text" name="city_name">
+      <input class="button" type="submit">
+    </form>
     <div id="map"></div>
+    <span id="lat" class="invisible">{{latitude}}</span>
+    <span id="lon" class="invisible">{{longitude}}</span>
     <script>
       function initMap() {
-        var location = {lat: 51.5285578, lng: -0.242023};
+        var latitude = document.getElementById('lat').innerHTML || 51.5285578;
+        var longitude = document.getElementById('lon').innerHTML || -0.242023;
+        //51.5285578 -0.242023
+        var location = {lat: latitude, lng: longitude};
         var map = new google.maps.Map(document.getElementById("map"), {
             center: location,
             zoom: 4
@@ -30,11 +29,5 @@
       }
     </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZ7WHje9ZXaHLUPrJJBinTC5TDprQ4c4&callback=initMap" async defer> </script>
-
-   <div class="about">
-     <h1>World Map</h1>
-     <p>Find the best time of year to travel to your dream location</p>
-   </div>
-
   </body>
 </html>

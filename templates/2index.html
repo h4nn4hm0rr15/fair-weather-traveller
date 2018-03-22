@@ -3,17 +3,41 @@
 <html>
   <head>
     <title>Weather Request</title>
-    <style>
-      body {color: lightpink;
-      }
-      form {text-align: center;
-      }
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='map.css') }}">
     </style>
   </head>
   <body>
-      <form method="POST" action="/temperature", action="/wind_speed", action="/weather">
+      <h3>Fair Weather Traveller</h3>
+      <form class="input" method="POST" action="/get_weather">
         City : <input type="text" name="city_name">
-        <input type="submit">
+        <input class="button" type="submit">
       </form>
+    <div>
+        <div> You're looking at the weather for {{ city }}. </div>
+        <div> The current weather is: {{ main }}. </div>
+        <div> The current temperature (C) is : {{ temp }} degrees. <div>
+        <div> The current windspeed (kph) is : {{ speed }} km per hour. </div> 
+    </div>
+    <div id="map"></div>
+    <span id="lat" class="invisible">{{latitude}}</span>
+    <span id="lon" class="invisible">{{longitude}}</span>
+    <script>
+      function initMap() {
+        var latitude = parseInt(document.getElementById('lat').innerHTML) || 51.5285578;
+        var longitude = parseInt(document.getElementById('lon').innerHTML) || -0.242023;
+        //51.5285578 -0.242023
+        var location = {lat: latitude, lng: longitude};
+        var map = new google.maps.Map(document.getElementById("map"), {
+            center: location,
+            zoom: 4
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+      }
+    </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZ7WHje9ZXaHLUPrJJBinTC5TDprQ4c4&callback=initMap" async defer> </script>
+
   </body>
 </html>

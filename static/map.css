@@ -2,6 +2,18 @@
 #map {
   height: 100%;
 }
+
+.input {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 150px;
+}
+
+.invisible {
+  height: 0;
+  width: 0;
+}
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
