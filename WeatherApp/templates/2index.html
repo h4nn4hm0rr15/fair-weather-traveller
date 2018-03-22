@@ -3,25 +3,15 @@
 <html>
   <head>
     <title>Weather Request</title>
-    <style>
-      body {background-color: lightpink;
-      }
-      form {text-align: center;
-            font-size: 35px;
-            padding-top: 150px;
-      }
-      input {width: 20%;
-            height: 30px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='2weather.css') }}">
   </head>
   <body>
-      <form method="POST" action="/get_weather">
+      <form class="input" method="POST" action="/get_weather">
         City : <input type="text" name="city_name">
-        <input type="submit">
+        <input class="button" type="submit">
       </form>
       <figure>
-        <img style="max-width: 35em;" class="pure-img: center;" src="fair-weather-traveller/WeatherApp/static/img/skyline.jpg" alt="Cityscape"></img>
+        <img style="max-width: 35em;" src="{{url_for('static',filename='skyline.jpg') }}" alt="Cityscape"></img>
       </figure>
   </body>
 </html>
