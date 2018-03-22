@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      #map {
-        height: 400px;
-        width: 100%;
-       }
   </head>
   <body>
     <h3>Fair Weather Traveller</h3>
@@ -23,14 +18,12 @@
         });
       }
     </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZ7WHje9ZXaHLUPrJJBinTC5TDprQ4c4&callback=initMap"
-"> </script>
-{% extends "layout.html" %}
-{% block content %}
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZ7WHje9ZXaHLUPrJJBinTC5TDprQ4c4&callback=initMap"> </script>
+
    <div class="about">
      <h1>World Map</h1>
      <p>Find the best time of year to travel to your dream location</p>
    </div>
- {% endblock %}
+
   </body>
 </html>

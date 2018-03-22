@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
-
+    # return render_template('home.html')
+    return render_template('map.html')
 # the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
 # """.format(time=the_time)
