@@ -7,7 +7,8 @@
     </style>
   </head>
   <body>
-      <h3>Fair Weather Traveller</h3>
+      <h1>Fair Weather Traveller</h1>
+      <h3>Travel according to the weather</h3>
       <form class="input" method="POST" action="/get_weather">
         City : <input type="text" name="city_name">
         <input class="button" type="submit">
@@ -16,7 +17,7 @@
         <div> You're looking at the weather for {{ city }}. </div>
         <div> The current weather is: {{ main }}. </div>
         <div> The current temperature (C) is : {{ temp }} degrees. <div>
-        <div> The current windspeed (kph) is : {{ speed }} km per hour. </div> 
+        <div> The current windspeed (kph) is : {{ speed }} km per hour. </div>
     </div>
     <div id="map"></div>
     <span id="lat" class="invisible">{{latitude}}</span>
