@@ -13,12 +13,12 @@
         City : <input type="text" name="city_name">
         <input class="button" type="submit">
       </form>
-    <div>
-        <div> You're looking at the weather for {{ city }}. </div>
-        <div> The current weather is: {{ main }}. </div>
-        <div> The current temperature (C) is : {{ temp }} degrees. <div>
-        <div> The current windspeed (kph) is : {{ speed }} km per hour. </div>
-    </div>
+    <!--<div>-->
+        <div class="info"> You're looking at the weather for {{ city }}. </div>
+        <div class="info"> The current weather is: {{ main }}. </div>
+        <div class="info"> The current temperature (C) is : {{ temp }} degrees. </div>
+        <div class="info"> The current windspeed (kph) is : {{ speed }} km per hour. </div>
+    <!--</div>-->
     <div id="map"></div>
     <span id="lat" class="invisible">{{latitude}}</span>
     <span id="lon" class="invisible">{{longitude}}</span>
