@@ -6,7 +6,7 @@
 .input {
   text-align: center;
   font-size: 35px;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 .invisible {
@@ -15,11 +15,12 @@
 }
 
 /* Optional: Makes the sample page fill the window. */
-/*html, body {
+body {
   height: 100%;
   margin: 0;
   padding: 0;
-}*/
+  background-color: gray;
+}
 
 h1 {
   text-align: center;
@@ -34,4 +35,5 @@ h3 {
 #info {
   text-align: center;
   font-size: 25px;
+  font-style: italic; 
 }
